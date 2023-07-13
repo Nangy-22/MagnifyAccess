@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MagnifyAccess</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-white navbar-light shadow">
+      <div class="container-fluid px-5">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html"><img src="logo.png" /></a>
+
+        <!-- Nav Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <!-- Menu Links -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item px-md-3">
+              <a class="nav-link" href="index.html">Employee Portal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hr.html">Human Resources Portal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Employee Submission Form -->
+    <div class="containerForm p-5 mx-auto">
+      <!-- Breadcrumb Nav -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pb-5">
+          <li class="breadcrumb-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="index.html">Employee Portal</a>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Welcome Message -->
+      <h1 class="pb-2">Employee Submission Form</h1>
+      <p class="lead pb-5">
+        Welcome to the Employee Accommodation Portal. We are committed to
+        ensuring that all employees feel comfortable and supported in their work
+        environment. As part of our commitment to inclusivity and providing
+        necessary accommodations, we kindly request that you provide any
+        relevant documentation regarding your accommodation needs. This will
+        help us better understand your requirements and ensure that we can
+        provide appropriate support from day one.
+      </p>
+
+      <!-- Submission Form Start -->
+      <form
+        class="row g-3 p-5 bg-success bg-opacity-10 rounded-3 shadow"
+        action="save.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <!-- Employee Info -->
+        <h3>Enter Your Personal Data</h3>
+        <div class="col-md-4">
+          <label for="empFName" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="empFName"
+            name="empFName"
+            placeholder="Enter First Name"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="empLName" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="empLName"
+            name="empLName"
+            placeholder="Enter Last Name"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter Email Address"
+            required
+          />
+        </div>
+
+        <!-- Employee Status -->
+        <h3 class="pt-5">Enter Your Employee Data</h3>
+
+        <div class="col-md-4">
+          <label for="emplNumber" class="form-label">Employee ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="emplNumber"
+            name="emplNumber"
+            placeholder="Enter Your Employee ID"
+            required
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label for="department" class="form-label">Department</label>
+          <select
+            class="form-select form-control"
+            id="department"
+            name="department"
+            required
+          >
+            <option value="">Select Department</option>
+            <option value="frontend">Frontend Development</option>
+            <option value="backend">Backend Development</option>
+            <option value="fullstack">Fullstack Development</option>
+            <option value="uiux">UI/UX Design</option>
+            <option value="qa">Quality Assurance</option>
+            <option value="project">Project Management</option>
+            <option value="devops">DevOps</option>
+            <option value="data">Data Analysis</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label for="employmentStatus" class="form-label"
+            >Employment Status</label
+          >
+          <select
+            class="form-select form-control"
+            id="employmentStatus"
+            name="employmentStatus"
+            required
+          >
+            <option value="">Select Employment Status</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="seasonal">Seasonal</option>
+            <option value="contract">Contract</option>
+          </select>
+        </div>
+
+        <!-- Accomodation File -->
+        <div class="col-md-12">
+          <h3 class="pt-5">Upload Your Accommodation Request Document</h3>
+          <label for="accommodationFile" class="form-label"></label>
+          <input
+            type="file"
+            class="form-control"
+            id="accommodationFile"
+            name="accommodationFile"
+            accept=".pdf, .doc, .docx, .pages"
+            required
+          />
+          <small class="form-text text-muted ms-3"
+            >Accepted file types: PDF, Word, Pages. Max size: 2 MB</small
+          >
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-success" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+    <!-- Link to JavaScript -->
+    <script src="script.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

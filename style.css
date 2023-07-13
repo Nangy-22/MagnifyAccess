@@ -1,0 +1,46 @@
+body {
+  background-color: cornsilk;
+}
+
+h1,
+h2,
+h3 {
+  color: #21525c !important;
+}
+
+.nav-item {
+  color: #21525c;
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+  border: none;
+}
+
+.btn {
+  background-color: #21525c !important;
+}
+
+.btn:hover {
+  background-color: #2c6c79 !important;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.table-responsive {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.containerForm {
+  max-width: 1000px;
+}
